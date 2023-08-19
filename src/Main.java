@@ -48,10 +48,12 @@ public class Main {
         double population = 12_000_000;
         double birth = population * 0.017;
         double mortality = population * 0.008;
-        for (i = 0; i < 10; i ++ )
-            population = population + birth - mortality;
         {
-            System.out.println("Год " + i + ", численность населения составляет " + population);
+            for (i = 0; i < 10; i++)
+                population = population + birth - mortality;
+            {
+                System.out.println("Год " + i + ", численность населения составляет " + population);
+            }
         }
 
         // Решение задачи из урока
@@ -96,24 +98,24 @@ public class Main {
         }
 
         // Решение 7 задачи. Не уверена, что решение правильное, но не могу понять, как составить нужную формулу.
-        int firstFriday = 0;
-        firstFriday = 5;
-        for (i = firstFriday; i <= 31; i ++)
+        int firstFriday = 1;
+        for (i = firstFriday; i <= 31; i = i + 7)
         {
-            if (i % 7 == 0) {
-                System.out.println("Сегодня пятница, " + i + "-е число. Необходимо подготовить отчет");
-            }
+            System.out.println("Сегодня пятница, " + i + "-е число. Необходимо подготовить отчет");
         }
 
         // Решение 8 задачи.
+        int zeroYear = 0;
         int thisYear = 2023;
         int pastYear = thisYear - 200;
         int futureYear = thisYear + 100;
-        for (i = pastYear; i <= futureYear; i ++)
+        i = zeroYear + 79;
+        for (i = pastYear; i <= futureYear; )
         {
             if (i % 79 == 0) {
                 System.out.println(i);
             }
         }
+
     }
 }
