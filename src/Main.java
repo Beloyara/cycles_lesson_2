@@ -2,23 +2,6 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
-        // Решение 8 задачи из прошлого урока
-        int contribution = 29_000;
-        int sum = 0;
-        for (int i = 1; i <= 12; i++) {
-            sum = sum + contribution;
-            System.out.println("Месяц " + i + " , сумма накоплений равна " + sum + " рублей");
-        }
-
-        // Решение 9 задачи из прошлого урока
-        double contribution2 = 29_000;
-        double sum2 = 0;
-        for (int i = 1; i <= 12; i++) {
-            sum2 *= 1.01;
-            sum2 += contribution2;
-            System.out.println("Месяц " + i + " , сумма накоплений равна " + sum2 + " рублей");
-        }
-
         // Решение 1 задачи
         int contribution1_1 = 15_000;
         int sum1_1 = 0;
@@ -109,8 +92,7 @@ public class Main {
         int thisYear = 2023;
         int pastYear = thisYear - 200;
         int futureYear = thisYear + 100;
-        i = zeroYear + 79;
-        for (i = pastYear; i <= futureYear; )
+        for (i = pastYear; i <= futureYear; i = zeroYear + 79)
         {
             if (i % 79 == 0) {
                 System.out.println(i);
