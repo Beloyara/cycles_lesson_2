@@ -19,18 +19,18 @@ public class Main {
         }
         System.out.println(" ");
 
-        int start1 = 10;
-        for (; start1 >= 1; start1--) {
-            System.out.print(start1 + " ");
+        start = 10;
+        for (; start >= 1; start --) {
+            System.out.print(start + " ");
         }
         System.out.println(" ");
 
         // Решение 3 задачи
-        double population = 12_000_000;
-        double birth = population * 0.017;
-        double mortality = population * 0.008;
+        int population = 12_000_000;
+        int birth = (int) (population * 0.017);
+        int mortality = (int) (population * 0.008);
         {
-            for (i = 0; i < 10; i++)
+            for (i = 0; i < 10; i ++)
                 population = population + birth - mortality;
             {
                 System.out.println("Год " + i + ", численность населения составляет " + population);
@@ -41,7 +41,7 @@ public class Main {
         int salary = 65_535;
         int total = 0;
         int a = 0;
-        for (; total < 1_000_000; a++) {
+        for (; total < 1_000_000; a ++) {
             total = total + total / 100;
             total = total + salary;
             if (a % 5 == 0) {
@@ -64,13 +64,13 @@ public class Main {
         }
 
         // Решение 6 задачи
-        double deposit_1 = 15_000;
-        double interests_1 = deposit_1 * 0.07;
+        deposit = 15_000;
+        interests = deposit * 0.07;
         double sumForTask6 = 0;
         for (i = 0; i <= 108; i++) {
-            sumForTask6 = deposit_1;
-            deposit_1 = deposit_1 + interests_1;
-            interests_1 = deposit_1 * 0.07;
+            sumForTask6 = deposit;
+            deposit = deposit + interests;
+            interests = deposit * 0.07;
             if (i % 6 == 0) {
                 System.out.println("Месяц " + i + " накопилось " + sumForTask6 + " рублей");
             }
@@ -93,11 +93,14 @@ public class Main {
         }
 
         // Другое решение 8 задачи.
-        int thisYear1 = 2023;
-        int pastYear1 = thisYear1 - 200;
-        int futureYear1 = thisYear1 + 100;
-        for (i = pastYear1; i <= futureYear1; i = i + 79) {
-            System.out.println(i);
+        int zeroYear = 0;
+        thisYear = 2023;
+        pastYear = thisYear - 200;
+        futureYear = thisYear + 100;
+        for (i = pastYear; i <= futureYear; i = i + 79) {
+            if (i % 79 == 0) {
+                System.out.println(i);
+            }
         }
     }
 }
