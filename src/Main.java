@@ -29,9 +29,8 @@ public class Main {
         int population = 12_000_000;
         int birth = (int) (population * 0.017);
         int mortality = (int) (population * 0.008);
-        {
-            for (i = 0; i < 10; i ++)
-                population = population + birth - mortality;
+        for (i = 0; i < 10; i ++) {
+            population = population + birth - mortality;
             {
                 System.out.println("Год " + i + ", численность населения составляет " + population);
             }
@@ -97,8 +96,8 @@ public class Main {
         thisYear = 2023;
         pastYear = thisYear - 200;
         futureYear = thisYear + 100;
-        for (i = pastYear; i <= futureYear; i = i + 79) {
-            if (i % 79 == 0) {
+        for (i = pastYear; i <= futureYear; i = zeroYear + 79) {
+            if (i > pastYear) {
                 System.out.println(i);
             }
         }
