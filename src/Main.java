@@ -95,11 +95,14 @@ public class Main {
         int zeroYear = 0;
         thisYear = 2023;
         pastYear = thisYear - 200;
-        futureYear = thisYear + 100;
+        futureYear = thisYear + 10;
         for (i = zeroYear; i <= futureYear; i = i + 79) {
             if (i > pastYear) {
                 System.out.println(i);
             }
         }
+
+
+
     }
 }
