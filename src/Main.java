@@ -29,11 +29,12 @@ public class Main {
         int population = 12_000_000;
         int birth = (int) (population * 0.017);
         int mortality = (int) (population * 0.008);
-        for (i = 0; i < 10; i ++) {
-            population = population + birth - mortality;
-            {
-                System.out.println("Год " + i + ", численность населения составляет " + population);
-            }
+        int increase = birth - mortality;
+        for (i = 1; i <= 10; i ++)
+        {
+            population = population + increase;
+            increase = (int) ((population * 0.017) - (population * 0.008));
+            System.out.println("Год " + i + ", численность населения составляет " + population);
         }
 
         // Решение задачи из урока
